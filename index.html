@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Portfolio Gallery</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body class="theme-light">
+<header class="site-header">
+  <div class="brand">
+    <h1><a href="#home">My Portfolio</a></h1>
+    <nav class="top-nav">
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="controls">
+    <select id="themeSelect" aria-label="Theme">
+      <option value="theme-light">Light</option>
+      <option value="theme-dark">Dark</option>
+      <option value="theme-mono">Mono</option>
+    </select>
+  </div>
+</header>
+
+<section id="home" class="hero">
+  <div class="hero-inner">
+    <h2>Visual Stories — Photographs & Edits</h2>
+    <p>Responsive portfolio, automatic image discovery, category filters, infinite scroll & smooth animated masonry.</p>
+    <a class="btn" href="#portfolio">View portfolio</a>
+  </div>
+</section>
+
+<section id="portfolio" class="portfolio-section">
+  <div class="panel">
+    <div class="filters" id="filterBar" role="toolbar" aria-label="Category filters">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="portraits">Portraits</button>
+      <button class="filter" data-filter="landscape">Landscape</button>
+      <button class="filter" data-filter="ai">AI Art</button>
+      <button class="filter" data-filter="edits">Edits</button>
+    </div>
+  </div>
+
+  <div id="gallery" class="masonry-grid"></div>
+  <div id="loadStatus" class="load-status">Scroll down to load more…</div>
+</section>
+
+<section id="about" class="about-section">
+  <h3>About this portfolio</h3>
+  <p>This single-page portfolio automatically reads images from the repository's <code>/images</code> folder (see README). Images are categorized by filename conventions (see docs). The layout uses a CSS column masonry with smooth transitions and an animated lightbox for previews.</p>
+</section>
+
+<section id="contact" class="contact-section">
+  <h3>Contact</h3>
+  <p>Put your contact info here. Or link to social profiles.</p>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox hidden" aria-hidden="true">
+  <button id="lightboxClose" class="close" aria-label="Close">&times;</button>
+  <img id="lightboxImg" src="" alt="Preview">
+  <p id="lightboxCaption"></p>
+</div>
+
+<footer class="footer">
+  <p>© 2025 • Your Name</p>
+</footer>
+
+<script src="js/scripts.js"></script>
+</body>
+</html>
